@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -32,6 +36,10 @@ a {
 
 .brand img {
   height: 100%;
+}
+
+.user-links {
+  display: none;
 }
 
 /* ORDER PIZZA FORM */
@@ -103,13 +111,15 @@ form .form-buttons button:nth-of-type(2) {
   padding: 20px 0;
 }
 
-.hero .hero-image {
-  height: 160px;
-}
-
 .hero .hero-image img {
   height: 100%;
   width: 100%;
+}
+
+/* PIZZA IMAGES */
+
+.pizza-images {
+  display: none;
 }
 
 /* MENU */
@@ -118,8 +128,8 @@ form .form-buttons button:nth-of-type(2) {
 .corporate {
   background-color: rgb(34, 112, 177);
   color: white;
-  /* height: 100px; */
   font-size: 1.1rem;
+  padding: 0 10px;
 }
 
 .title {
@@ -127,12 +137,12 @@ form .form-buttons button:nth-of-type(2) {
   padding: 10px 25px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  font-size: 1rem;
 }
 
 .title h4 {
   font-size: 1.4rem;
-  margin-right: 10px;
 }
 
 .list {
@@ -148,7 +158,7 @@ form .form-buttons button:nth-of-type(2) {
 }
 
 .about {
-  margin-top: 65px;
+  margin-top: 55px;
 }
 
 /* FOOTER */
@@ -199,11 +209,157 @@ footer .social-media i {
 .footer-links a {
   color: rgb(34, 112, 177);
   padding-right: 10px;
-  margin: 5px;
+  margin: 4px 5px;
   border-right: 1px solid rgb(34, 112, 177);
 }
 
+.footer-links a:last-of-type {
+  border-right: none;
+}
+
 footer p {
-  margin: 10px 0 30px;
+  margin: 20px 0 30px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    background-color: #272727;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  .navbar .brand img {
+    content: url('https://www.dominos.co.uk/Content/Images/Site/dominos_logo.png?v=3');
+    /* height: 60px; */
+  }
+
+  .navbar {
+    color: white;
+    padding: 25px 0 20px;
+  }
+
+  .brand {
+    height: 5rem;
+  }
+
+  .brand img {
+    height: 100%;
+  }
+
+  .user i {
+    display: none;
+  }
+
+  .user-links {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .user-links a {
+    color: white;
+    padding-left: 5px;
+  }
+
+  .user-links a:first-of-type {
+    border-right: 1px solid white;
+    padding-right: 10px;
+  }
+
+  .order-pizza {
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 375px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 70px 0 0;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+    padding: 20px 0;
+  }
+
+  .hero .hero-image img {
+    content: url('https://www.dominos.co.uk/Content/banners/GB/Home/1920x350/20210318-MeatballMarinara.jpg');
+    transform: scale(1.02);
+  }
+
+  .pizza-images {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .pizza-image {
+    padding: 5px;
+    flex: 1 1 30%;
+    margin: 0 10px;
+  }
+
+  .pizza-image h4 {
+    text-align: center;
+    font-size: 2rem;
+    color: #cf2222;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .pizza-image img {
+    width: 100%;
+  }
+
+  .other-links {
+    display: flex;
+  }
+
+  .about {
+    margin-top: 0;
+  }
+
+  .about,
+  .corporate {
+    flex: 1 1 40%;
+  }
+
+  .title {
+    padding: 20px 25px;
+  }
+
+  .title h4 {
+    font-size: 1.8rem;
+  }
+
+  .other-links ul li {
+    border-bottom: 1px solid white;
+  }
+
+  .other-links ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  /* 
+  .pizza-image h4::before {
+    content: '';
+    display: inline-block;
+    background-image: url('https://www.dominos.co.uk/Content/images/Site/_Reskin/Images/swirl-title/mobile/mobile-swirl-left.svg');
+    width: 100px;
+  }
+  .pizza-image h4::after {
+    content: '';
+    display: block;
+    background-image: url('https://www.dominos.co.uk/Content/images/Site/_Reskin/Images/swirl-title/mobile/mobile-swirl-right.svg');
+    background-size: 100%;
+  } */
 }
