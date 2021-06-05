@@ -2,7 +2,7 @@
 
 - Demo: https://tominos.netlify.app/
 
-This project is a simple frontend clone of the [Domino's Pizza website] (https://www.dominos.co.uk/). It is purely made up of HTML & CSS and is responsive to mobile, tablet and PC. 
+This project is a simple frontend clone of the [Domino's Pizza website](https://www.dominos.co.uk/). It is purely made up of HTML & CSS and is responsive to mobile, tablet and PC. 
 
 ### Tools used:
 - HTML
